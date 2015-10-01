@@ -8,9 +8,9 @@ public class Initialize : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        player1 = (GameObject)Instantiate(Resources.Load("Prefabs/Player"), new Vector3(0, 1, 0), Quaternion.identity);
+        player1 = (GameObject)Instantiate(Resources.Load("Prefabs/Player"), new Vector3(0, 0.5f, 0), Quaternion.identity);
         player1.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/P1");
-        player2 = (GameObject)Instantiate(Resources.Load("Prefabs/Player"), new Vector3(2, 1, 0), Quaternion.identity);
+        player2 = (GameObject)Instantiate(Resources.Load("Prefabs/Player"), new Vector3(2, 0.5f, 0), Quaternion.identity);
         player2.GetComponent<PlayerSetup>().player2 = true;
         player2.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/P2");
 
