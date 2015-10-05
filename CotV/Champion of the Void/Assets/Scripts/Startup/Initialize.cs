@@ -14,6 +14,9 @@ public class Initialize : MonoBehaviour {
         player2.GetComponent<PlayerSetup>().player2 = true;
         player2.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/P2");
 
+        player1.name = "Player1";
+        player2.name = "Player2";
+
         Camera.main.GetComponent<CameraFollow>().P1 = player1;
         Camera.main.GetComponent<CameraFollow>().P2 = player2;
         Camera.main.GetComponent<CameraFollow>().SetRenderer();
