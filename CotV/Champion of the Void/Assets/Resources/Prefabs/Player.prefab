@@ -32,6 +32,7 @@ GameObject:
   - 143: {fileID: 14304416}
   - 114: {fileID: 11446772}
   - 114: {fileID: 11415632}
+  - 114: {fileID: 11494650}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -236,6 +237,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &11494650
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 151744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26b9974012bcca541a1c5a2be032405d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnergyWave: {fileID: 171538, guid: 0f75aa518b00db14182511e2c04eea12, type: 2}
 --- !u!114 &11496436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -249,12 +262,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: .0758621693, g: 1, b: 0, a: .39199999}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -369,6 +376,10 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: EnergyWave
+      value: 
+      objectReference: {fileID: 171538, guid: 0f75aa518b00db14182511e2c04eea12, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 151744}

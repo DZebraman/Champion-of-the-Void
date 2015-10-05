@@ -48,19 +48,19 @@ public class PlayerSetup : MonoBehaviour {
             }
         }
         else{
-            if (Input.GetKey(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.I))
             {
                 acc.z += accelAmount;
             }
-            if (Input.GetKey(KeyCode.DownArrow))
+            if (Input.GetKey(KeyCode.K))
             {
                 acc.z -= accelAmount;
             }
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Input.GetKey(KeyCode.J))
             {
                 acc.x -= accelAmount;
             }
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.L))
             {
                 acc.x += accelAmount;
             }
