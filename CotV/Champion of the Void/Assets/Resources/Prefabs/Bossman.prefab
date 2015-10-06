@@ -32,7 +32,7 @@ GameObject:
   - 114: {fileID: 11403406}
   m_Layer: 0
   m_Name: Bossman
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,6 +233,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPanel: {fileID: 100590}
+  healthTotal: 0
+  healthCurrent: 0
+  healthPercent: 0
 --- !u!114 &11417976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -283,12 +286,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: .0588235296, g: 1, b: 0, a: .39199999}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -308,6 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ea2d723048f77d4cbc8fb5c48271c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 0
 --- !u!136 &13608184
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -385,7 +383,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 139202}

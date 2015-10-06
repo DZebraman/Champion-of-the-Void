@@ -1,315 +1,221 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-79600
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-106500
 Cmd: getPlatforms
 Cmd: preprocess
-  insize=6485 outsize=1841 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2800 outsize=2192 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2800 outsize=1355 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2523 outsize=2647 kw=POINT SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2523 outsize=1648 kw=POINT SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2523 outsize=2192 kw=DIRECTIONAL SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2523 outsize=1331 kw=DIRECTIONAL SHADOWS_OFF pd= ok=1
+  insize=8333 outsize=2044 ok=1
 Cmd: preprocess
-  insize=6615 outsize=1992 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2691 outsize=2192 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2691 outsize=1355 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2607 outsize=2647 kw=POINT SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2607 outsize=1648 kw=POINT SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2607 outsize=2192 kw=DIRECTIONAL SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2607 outsize=1331 kw=DIRECTIONAL SHADOWS_OFF pd= ok=1
+  insize=10964 outsize=662 ok=1
 Cmd: preprocess
-  insize=7601 outsize=2416 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=3061 outsize=2403 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=3061 outsize=1729 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2798 outsize=2858 kw=POINT SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2798 outsize=1696 kw=POINT SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2798 outsize=2403 kw=DIRECTIONAL SHADOWS_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2798 outsize=1379 kw=DIRECTIONAL SHADOWS_OFF pd= ok=1
+  insize=1248 outsize=340 ok=1
 Cmd: preprocess
-  insize=3519 outsize=2097 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1758 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1758 outsize=859 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+  insize=19889 outsize=3160 ok=1
 Cmd: preprocess
-  insize=5204 outsize=2511 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1802 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1802 outsize=998 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1565 outsize=1388 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1565 outsize=957 kw=SHADOWS_DEPTH pd= ok=1
+  insize=1063 outsize=406 ok=1
 Cmd: preprocess
-  insize=5204 outsize=2511 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1802 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1565 outsize=1493 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1565 outsize=1160 kw=SHADOWS_CUBE pd= ok=1
+  insize=9585 outsize=798 ok=1
 Cmd: preprocess
-  insize=5719 outsize=2902 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1927 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1927 outsize=1282 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1565 outsize=1388 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1565 outsize=957 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1927 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1565 outsize=1493 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1565 outsize=1160 kw=SHADOWS_CUBE pd= ok=1
+  insize=1624 outsize=334 ok=1
 Cmd: preprocess
-  insize=5745 outsize=2927 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1927 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1927 outsize=1282 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1565 outsize=1388 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1565 outsize=957 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1927 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
+  insize=3721 outsize=2124 ok=1
 Cmd: preprocess
-  insize=4134 outsize=2599 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1871 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1871 outsize=1144 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1871 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
+  insize=18681 outsize=3045 ok=1
 Cmd: preprocess
-  insize=4388 outsize=2783 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1941 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1941 outsize=1160 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1941 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=4390 outsize=2785 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1941 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1941 outsize=1160 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1941 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=4810 outsize=3154 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1992 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1992 outsize=1225 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1992 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=4810 outsize=3154 ok=1
-Cmd: preprocess
-  insize=4810 outsize=3154 ok=1
-Cmd: preprocess
-  insize=4810 outsize=3154 ok=1
-Cmd: preprocess
-  insize=4759 outsize=3154 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1941 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1941 outsize=1160 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1941 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=4759 outsize=3154 ok=1
-Cmd: preprocess
-  insize=4818 outsize=3162 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1992 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1992 outsize=1225 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1992 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=5252 outsize=3549 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2039 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2039 outsize=1290 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2039 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=5252 outsize=3549 ok=1
-Cmd: preprocess
-  insize=5284 outsize=3547 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2073 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2073 outsize=1233 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2073 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=5284 outsize=3547 ok=1
-Cmd: preprocess
-  insize=5220 outsize=3547 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2009 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2009 outsize=1111 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2009 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=5220 outsize=3547 ok=1
-Cmd: preprocess
-  insize=5284 outsize=3547 ok=1
-Cmd: preprocess
-  insize=5047 outsize=3531 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1852 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1852 outsize=884 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=1852 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=5065 outsize=3549 ok=1
-Cmd: preprocess
-  insize=5083 outsize=3567 ok=1
-Cmd: preprocess
-  insize=5306 outsize=3569 ok=1
-Cmd: preprocess
-  insize=5304 outsize=3567 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2885 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2217 outsize=1493 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2217 outsize=1802 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=9641 outsize=3963 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=7684 outsize=3256 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2885 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2885 outsize=2363 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2217 outsize=1388 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2217 outsize=1599 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2217 outsize=1493 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2217 outsize=1802 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2885 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=7684 outsize=3256 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2885 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2885 outsize=2363 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2217 outsize=1388 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2217 outsize=1599 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2885 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=8240 outsize=3642 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2942 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2942 outsize=2428 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2330 outsize=1388 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2330 outsize=1721 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2942 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=8240 outsize=3642 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2942 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2942 outsize=2428 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2330 outsize=1388 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2330 outsize=1721 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2942 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=8140 outsize=3641 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2893 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2893 outsize=2363 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2281 outsize=1388 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2281 outsize=1656 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2893 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=8237 outsize=3642 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2939 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2939 outsize=2428 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2330 outsize=1388 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2330 outsize=1721 kw=SHADOWS_DEPTH pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2939 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2330 outsize=1493 kw=SHADOWS_CUBE pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2330 outsize=1924 kw=SHADOWS_CUBE pd= ok=1
-Cmd: preprocess
-  insize=5304 outsize=3567 ok=1
-Cmd: preprocess
-  insize=6120 outsize=4080 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2376 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2376 outsize=1607 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2376 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
-Cmd: preprocess
-  insize=6120 outsize=4079 ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2376 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=2376 outsize=1607 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
-Cmd: compileSnippet
-  api=4 type=0 insize=2376 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
+  insize=844 outsize=330 ok=1
 Cmd: preprocess
   insize=6126 outsize=4082 ok=1
+Cmd: preprocess
+  insize=926 outsize=289 ok=1
+Cmd: preprocess
+  insize=5943 outsize=2910 ok=1
+Cmd: preprocess
+  insize=8237 outsize=3642 ok=1
+Cmd: preprocess
+  insize=1923 outsize=467 ok=1
+Cmd: preprocess
+  insize=1241 outsize=387 ok=1
+Cmd: preprocess
+  insize=7711 outsize=3081 ok=1
+Cmd: preprocess
+  insize=3521 outsize=640 ok=1
+Cmd: preprocess
+  insize=4305 outsize=2706 ok=1
+Cmd: preprocess
+  insize=12270 outsize=4120 ok=1
+Cmd: preprocess
+  insize=3915 outsize=2297 ok=1
+Cmd: preprocess
+  insize=1164 outsize=384 ok=1
+Cmd: preprocess
+  insize=6511 outsize=781 ok=1
+Cmd: preprocess
+  insize=1097 outsize=289 ok=1
+Cmd: preprocess
+  insize=5102 outsize=2449 ok=1
+Cmd: preprocess
+  insize=18621 outsize=2911 ok=1
+Cmd: preprocess
+  insize=24930 outsize=5516 ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=2379 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+  api=4 type=0 insize=9378 outsize=3963 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=2379 outsize=1607 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+  api=4 type=1 insize=9378 outsize=11983 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=2379 outsize=1006 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1
+  api=4 type=0 insize=6779 outsize=4280 kw=POINT LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6779 outsize=7920 kw=POINT LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4242 outsize=2395 kw=SHADOWS_DEPTH LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4242 outsize=4564 kw=SHADOWS_DEPTH LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: preprocess
+  insize=2413 outsize=753 ok=1
+Cmd: preprocess
+  insize=883 outsize=277 ok=1
+Cmd: preprocess
+  insize=1314 outsize=362 ok=1
+Cmd: preprocess
+  insize=1353 outsize=326 ok=1
+Cmd: preprocess
+  insize=1188 outsize=255 ok=1
+Cmd: preprocess
+  insize=1344 outsize=330 ok=1
+Cmd: preprocess
+  insize=6212 outsize=1773 ok=1
+Cmd: preprocess
+  insize=43990 outsize=6893 ok=1
+Cmd: preprocess
+  insize=1187 outsize=304 ok=1
+Cmd: preprocess
+  insize=2235 outsize=619 ok=1
+Cmd: preprocess
+  insize=902 outsize=252 ok=1
+Cmd: preprocess
+  insize=17913 outsize=3971 ok=1
+Cmd: preprocess
+  insize=636 outsize=302 ok=1
+Cmd: preprocess
+  insize=6131 outsize=973 ok=1
+Cmd: preprocess
+  insize=25142 outsize=5876 ok=1
+Cmd: preprocess
+  insize=32573 outsize=255 ok=1
+Cmd: preprocess
+  insize=1154 outsize=242 ok=1
+Cmd: preprocess
+  insize=4302 outsize=504 ok=1
+Cmd: preprocess
+  insize=992 outsize=248 ok=1
+Cmd: preprocess
+  insize=4770 outsize=1779 ok=1
+Cmd: preprocess
+  insize=9444 outsize=4196 ok=1
+Cmd: preprocess
+  insize=21537 outsize=3622 ok=1
+Cmd: preprocess
+  insize=12787 outsize=1859 ok=1
+Cmd: preprocess
+  insize=963 outsize=333 ok=1
+Cmd: preprocess
+  insize=6023 outsize=731 ok=1
+Cmd: preprocess
+  insize=2690 outsize=761 ok=1
+Cmd: preprocess
+  insize=24319 outsize=5623 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=9471 outsize=3963 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=9471 outsize=12462 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6466 outsize=4280 kw=POINT SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6466 outsize=7774 kw=POINT SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3778 outsize=2395 kw=SHADOWS_DEPTH LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3778 outsize=4597 kw=SHADOWS_DEPTH LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: preprocess
+  insize=10773 outsize=2532 ok=1
+Cmd: preprocess
+  insize=2486 outsize=1156 ok=1
+Cmd: preprocess
+  insize=12423 outsize=2312 ok=1
+Cmd: preprocess
+  insize=1909 outsize=438 ok=1
+Cmd: preprocess
+  insize=1530 outsize=277 ok=1
+Cmd: preprocess
+  insize=23967 outsize=4108 ok=1
+Cmd: preprocess
+  insize=3938 outsize=531 ok=1
+Cmd: preprocess
+  insize=1675 outsize=280 ok=1
+Cmd: preprocess
+  insize=965 outsize=333 ok=1
+Cmd: preprocess
+  insize=1082 outsize=404 ok=1
+Cmd: preprocess
+  insize=673 outsize=248 ok=1
+Cmd: preprocess
+  insize=5564 outsize=855 ok=1
+Cmd: preprocess
+  insize=2427 outsize=1522 ok=1
+Cmd: preprocess
+  insize=5171 outsize=737 ok=1
+Cmd: preprocess
+  insize=520 outsize=341 ok=1
+Cmd: preprocess
+  insize=6414 outsize=902 ok=1
+Cmd: preprocess
+  insize=1306 outsize=373 ok=1
+Cmd: preprocess
+  insize=32583 outsize=255 ok=1
+Cmd: preprocess
+  insize=5175 outsize=1721 ok=1
+Cmd: preprocess
+  insize=7310 outsize=5315 ok=1
+Cmd: preprocess
+  insize=6737 outsize=236 ok=1
+Cmd: preprocess
+  insize=4310 outsize=418 ok=1
+Cmd: preprocess
+  insize=4608 outsize=887 ok=1
+Cmd: preprocess
+  insize=5717 outsize=1219 ok=1
+Cmd: preprocess
+  insize=716 outsize=286 ok=1
+Cmd: preprocess
+  insize=656 outsize=299 ok=1
+Cmd: preprocess
+  insize=24567 outsize=5144 ok=1
+Cmd: preprocess
+  insize=3696 outsize=630 ok=1
+Cmd: preprocess
+  insize=3765 outsize=2110 ok=1
+Cmd: preprocess
+  insize=9243 outsize=3765 ok=1
+Cmd: preprocess
+  insize=799 outsize=276 ok=1
+Cmd: preprocess
+  insize=12337 outsize=5362 ok=1
+Cmd: preprocess
+  insize=1265 outsize=272 ok=1
+Cmd: preprocess
+  insize=2015 outsize=946 ok=1
+Cmd: preprocess
+  insize=5095 outsize=700 ok=1
+Cmd: preprocess
+  insize=1017 outsize=470 ok=1
+Cmd: preprocess
+  insize=1139 outsize=364 ok=1
+Cmd: preprocess
+  insize=512 outsize=241 ok=1
+Cmd: preprocess
+  insize=650 outsize=290 ok=1
+Cmd: preprocess
+  insize=5006 outsize=866 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6779 outsize=4280 kw=SPOT LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6779 outsize=8416 kw=SPOT LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=9378 outsize=3963 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_OFF DYNAMICLIGHTMAP_OFF VERTEXLIGHT_ON pd= ok=1

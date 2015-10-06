@@ -47,7 +47,7 @@ public class PlayerAbilities : MonoBehaviour {
     void Player1Ability1 ()
     {
         Vector3 temp = transform.position;
-        temp.y = 0.0f;
+        temp.y = 0.01f;
         GameObject.Instantiate(EnergyWave, temp, Quaternion.identity);
         EnergyWaveCooldown = 2.0f;
     }
@@ -55,7 +55,7 @@ public class PlayerAbilities : MonoBehaviour {
     void Player1Ability2()
     {
         Vector3 temp = transform.position;
-        temp.y = 0.0f;
+        temp.y = 0.01f;
         GameObject.Instantiate(EnergyWave, temp, Quaternion.identity);
         EnergyWaveCooldown = 2.0f;
     }
@@ -63,7 +63,7 @@ public class PlayerAbilities : MonoBehaviour {
     void Player2Ability1()
     {
         Vector3 temp = transform.position;
-        temp.y = 0.0f;
+        temp.y = 0.01f;
         GameObject.Instantiate(EnergyWave, temp, Quaternion.identity);
         EnergyWaveCooldown = 2.0f;
     }
@@ -71,7 +71,7 @@ public class PlayerAbilities : MonoBehaviour {
     void Player2Ability2()
     {
         Vector3 temp = transform.position;
-        temp.y = 0.0f;
+        temp.y = 0.01f;
         GameObject.Instantiate(EnergyWave, temp, Quaternion.identity);
         EnergyWaveCooldown = 2.0f;
     }

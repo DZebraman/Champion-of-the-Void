@@ -20,6 +20,8 @@ public class Initialize : MonoBehaviour {
         Camera.main.GetComponent<CameraFollow>().P1 = player1;
         Camera.main.GetComponent<CameraFollow>().P2 = player2;
         Camera.main.GetComponent<CameraFollow>().SetRenderer();
+
+		GameObject.Find ("Bossman").GetComponent<LightBossScript> ().Init ();
 	}
 	
 	// Update is called once per frame

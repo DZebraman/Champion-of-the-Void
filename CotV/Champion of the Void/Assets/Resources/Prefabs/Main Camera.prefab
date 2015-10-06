@@ -98,7 +98,6 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -141,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76ec4cac052a1c4c84af022da23fbc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dist: 15.2200003
+  dist: 30.9500008
   speed: 4.28999996
 --- !u!114 &11434504
 MonoBehaviour:
@@ -293,7 +292,6 @@ ReflectionProbe:
     serializedVersion: 2
     m_Bits: 4294967039
   m_IntensityMultiplier: 1
-  m_BlendDistance: 1
   m_HDR: 1
   m_BoxProjection: 0
   m_RenderDynamicObjects: 0
@@ -325,7 +323,6 @@ ReflectionProbe:
     serializedVersion: 2
     m_Bits: 4294967005
   m_IntensityMultiplier: 1
-  m_BlendDistance: 1
   m_HDR: 1
   m_BoxProjection: 0
   m_RenderDynamicObjects: 0
@@ -381,6 +378,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_BackGroundColor.b
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: dist
+      value: 30.9500008
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

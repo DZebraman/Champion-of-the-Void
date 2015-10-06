@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ScriptAnchor
   - Health
+  - Boss
   layers:
   - Default
   - TransparentFX

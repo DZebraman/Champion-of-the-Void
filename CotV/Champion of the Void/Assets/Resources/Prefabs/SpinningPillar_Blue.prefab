@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 419008}
   - 33: {fileID: 3348412}
   - 23: {fileID: 2334630}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 409512}
   - 198: {fileID: 19857178}
   - 199: {fileID: 19950474}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 491026}
   - 33: {fileID: 3349926}
   - 23: {fileID: 2316674}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ GameObject:
   - 33: {fileID: 3357128}
   - 64: {fileID: 6434306}
   - 23: {fileID: 2374756}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BlueDeco1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - 95: {fileID: 9597116}
   - 120: {fileID: 12033284}
   - 114: {fileID: 11489000}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: SpinningPillar_Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - 4: {fileID: 427336}
   - 33: {fileID: 3350614}
   - 23: {fileID: 2315086}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   - 4: {fileID: 419266}
   - 33: {fileID: 3368890}
   - 23: {fileID: 2392204}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   - 4: {fileID: 424390}
   - 33: {fileID: 3312456}
   - 23: {fileID: 2383542}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Plane003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 425308}
   - 108: {fileID: 10821382}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1637,6 +1637,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 15b43cc8a5699b949b10a41089c0a15e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 149628}

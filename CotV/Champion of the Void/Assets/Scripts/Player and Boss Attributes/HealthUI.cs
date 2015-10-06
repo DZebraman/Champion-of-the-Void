@@ -6,9 +6,9 @@ public class HealthUI : MonoBehaviour {
 
 	public GameObject healthPanel;
 	
-	private float healthTotal;
-	private float healthCurrent;
-	private float healthPercent;
+	public float healthTotal;
+	public float healthCurrent;
+	public float healthPercent;
 	
 	// Use this for initialization
 	void Start () {
@@ -16,12 +16,18 @@ public class HealthUI : MonoBehaviour {
 		healthCurrent = 10.0f;
 		healthPercent = 1.0f;
 	}
-	
+
+	public void TakeDamage(float damage){
+		//Debug.Log ("This code is flawless");
+		healthCurrent -= damage;
+	}
+
 	// Update is called once per frame
 	void Update () {
 		//healthCurrent -= 0.1f; // Use this to test health declining
 		if (healthCurrent <= 0) {
-			healthCurrent = 0;
+			//gameObject.GetComponent<MeshRenderer>().enabled = false;
+			gameObject.SetActive(false);
 		}
 
 		// Get the percentage of health remaing and change the bar based on that percentage
