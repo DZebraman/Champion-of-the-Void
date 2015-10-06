@@ -1,0 +1,136 @@
+Initialize engine version: 5.2.1f1 (44735ea161b3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 780 (ID=0x1004)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.036 seconds
+Initialize engine version: 5.2.1f1 (44735ea161b3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 780 (ID=0x1004)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.037 seconds
+desktop: 1920x1080 60Hz; virtual: 5760x1080 at -1920,0
+desktop: 1920x1080 60Hz; virtual: 5760x1080 at -1920,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: Q:\ChapionOfTheVoid\CotV\PlaytestBuild\CotV_Data\Managed\System.dll (this message is harmless)
+NullReferenceException: Object reference not set to an instance of an object
+  at LineRenderManager.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LineRenderManager.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LineRenderManager.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LineRenderManager.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LineRenderManager.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LineRenderManager.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LineRenderManager.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LineRenderManager.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at LineRenderManager.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 16360 -> priority: 1 
+  Thread -> id: b7c -> priority: 1 
+HIT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+HIT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+HIT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+HIT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+HIT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+HIT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+HIT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+HIT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+HIT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+HIT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
