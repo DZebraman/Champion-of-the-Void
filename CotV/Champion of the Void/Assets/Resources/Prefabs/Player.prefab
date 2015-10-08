@@ -186,6 +186,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPanel: {fileID: 175264}
+  healthTotal: 0
+  healthCurrent: 0
+  healthPercent: 0
 --- !u!114 &11446772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -249,6 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnergyWave: {fileID: 171538, guid: 0f75aa518b00db14182511e2c04eea12, type: 2}
+  Slingshot: {fileID: 150434, guid: d0d9452cd56bfd24a8b40ae88538758e, type: 2}
 --- !u!114 &11496436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -380,6 +384,10 @@ Prefab:
       propertyPath: EnergyWave
       value: 
       objectReference: {fileID: 171538, guid: 0f75aa518b00db14182511e2c04eea12, type: 2}
+    - target: {fileID: 0}
+      propertyPath: Slingshot
+      value: 
+      objectReference: {fileID: 150434, guid: d0d9452cd56bfd24a8b40ae88538758e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 151744}

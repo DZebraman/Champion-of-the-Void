@@ -5,7 +5,7 @@ public class LightBossScript : MonoBehaviour
 {
     private Light spot;
     private Vector3 fixatePlayer;
-	private Vector3 lastKnownLocation;
+	public Vector3 lastKnownLocation;
     private GameObject player1;
     private GameObject player2;
 
@@ -52,6 +52,14 @@ public class LightBossScript : MonoBehaviour
 		TurnToFace ();
 		ProcessMovement ();
 		Damage ();
+        /*
+		if (Vector3.Distance (transform.position, player1.transform.position) < 10.0f) {
+			lastKnownLocation = player1.transform.position;
+		}
+		if (Vector3.Distance (transform.position, player2.transform.position) < 10.0f) {
+			lastKnownLocation = player2.transform.position;
+		}
+        */
 		if (Vector3.Distance (transform.position, lastKnownLocation) < 2) {
 			RandomSearch();
 		}

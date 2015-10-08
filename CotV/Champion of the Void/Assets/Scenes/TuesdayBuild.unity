@@ -65,7 +65,6 @@ LightmapSettings:
     m_TextureCompression: 1
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
-    m_ReflectionCompression: 2
   m_LightmapSnapshot: {fileID: 0}
   m_RuntimeCPUUsage: 25
 --- !u!196 &4
@@ -85,6 +84,9 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!127 &5
+LevelGameManager:
+  m_ObjectHideFlags: 0
 --- !u!1001 &63876134
 Prefab:
   m_ObjectHideFlags: 0
@@ -337,6 +339,10 @@ Prefab:
       propertyPath: m_Name
       value: SpinningPillar_Blue (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 11489000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
   m_IsPrefabParent: 0
@@ -398,6 +404,10 @@ Prefab:
     - target: {fileID: 149628, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
       propertyPath: m_Name
       value: SpinningPillar_Blue (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
@@ -461,6 +471,10 @@ Prefab:
       propertyPath: m_Name
       value: SpinningPillar_Blue (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 11489000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
   m_IsPrefabParent: 0
@@ -510,6 +524,78 @@ Prefab:
     - target: {fileID: 11426544, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
       propertyPath: chromaticAberration
       value: 2.29999995
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467494, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: blurAmount
+      value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467494, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11467494, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: shader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446230, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446230, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: chromaticAberration
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446230, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: vignetteShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446230, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: separableBlurShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11446230, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: chromAberrationShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434504, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434504, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: threshold
+      value: .25
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434504, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: intensity
+      value: .75
+      objectReference: {fileID: 0}
+    - target: {fileID: 11434504, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: fastBloomShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462122, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462122, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: rand
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462122, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: aoShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479970, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479970, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: sunShaftsShader
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11479970, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
+      propertyPath: simpleClearShader
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 17dd2c218c56d1a469e17c14a5e64c5b, type: 2}
@@ -641,6 +727,10 @@ Prefab:
     - target: {fileID: 149628, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
       propertyPath: m_Name
       value: SpinningPillar_Blue (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
@@ -1307,6 +1397,10 @@ Prefab:
       propertyPath: m_Name
       value: SpinningPillar_Blue (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 11489000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
   m_IsPrefabParent: 0
@@ -1368,6 +1462,10 @@ Prefab:
     - target: {fileID: 149628, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
       propertyPath: m_Name
       value: SpinningPillar_Blue (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
@@ -1500,6 +1598,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: .276663184
       objectReference: {fileID: 0}
+    - target: {fileID: 11489000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
   m_IsPrefabParent: 0
@@ -1595,6 +1697,10 @@ Prefab:
       propertyPath: m_Name
       value: SpinningPillar_Blue (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 11489000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
   m_IsPrefabParent: 0
@@ -1656,6 +1762,10 @@ Prefab:
     - target: {fileID: 149628, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
       propertyPath: m_Name
       value: SpinningPillar_Blue (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 11489000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6f18a20e9d137247ab3daf65942b1a8, type: 2}

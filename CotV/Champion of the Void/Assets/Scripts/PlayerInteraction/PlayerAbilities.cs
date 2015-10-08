@@ -4,7 +4,10 @@ using System.Collections;
 public class PlayerAbilities : MonoBehaviour {
 
     public GameObject EnergyWave;
+	public GameObject Slingshot;
+
     float EnergyWaveCooldown = 0.0f;
+	float SlingshotCooldown = 0.0f;
 
     KeyCode p1a1 = KeyCode.Q;
     KeyCode p1a2 = KeyCode.E;
@@ -23,7 +26,7 @@ public class PlayerAbilities : MonoBehaviour {
             Player1Ability1();
         }
 
-        if (Input.GetKey(p1a2) && !GetComponent<PlayerSetup>().player2 && EnergyWaveCooldown < 0.0f)
+        if (Input.GetKey(p1a2) && !GetComponent<PlayerSetup>().player2 && SlingshotCooldown < 0.0f)
         {
             Player1Ability2();
         }
@@ -42,6 +45,11 @@ public class PlayerAbilities : MonoBehaviour {
         {
             EnergyWaveCooldown -= Time.deltaTime;
         }
+
+		if (SlingshotCooldown >= 0.0f)
+		{
+			SlingshotCooldown -= Time.deltaTime;
+		}
 	}
 
     void Player1Ability1 ()
@@ -56,8 +64,9 @@ public class PlayerAbilities : MonoBehaviour {
     {
         Vector3 temp = transform.position;
         temp.y = 0.01f;
-        GameObject.Instantiate(EnergyWave, temp, Quaternion.identity);
-        EnergyWaveCooldown = 2.0f;
+        GameObject mySlingshot = (GameObject) Instantiate(Slingshot, temp, Quaternion.identity);
+		mySlingshot.GetComponent<Slingshot>().owner = gameObject;
+        SlingshotCooldown = 2.0f;
     }
 
     void Player2Ability1()
