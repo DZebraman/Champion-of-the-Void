@@ -17,6 +17,11 @@ public class LightBossScript : MonoBehaviour
 	private Vector3 vel, accel;
 	public float maxSpeed;
 
+    Vector3 toP1;
+    Vector3 toP2;
+                
+    float angle1;
+    float angle2;
 
     // Use this for initialization
     public void Init()
@@ -72,85 +77,72 @@ public class LightBossScript : MonoBehaviour
 	}
 
 	private void Damage(){
-		Quaternion lookAtp1 = Quaternion.LookRotation (player1.transform.position);
-		Quaternion lookAtp2 = Quaternion.LookRotation (player2.transform.position);
 		RaycastHit hit;
 
-		if (Quaternion.Angle (transform.rotation, lookAtp1) < spot.spotAngle / 2) {
+        toP1 = player1.transform.position - transform.position;
+        toP2 = player2.transform.position - transform.position;
+
+        angle1 = Vector3.Angle(transform.forward, toP1);
+        angle2 = Vector3.Angle(transform.forward, toP2);
+
+		if ( angle1< spot.spotAngle / 2) {
 			Ray ray = new Ray (transform.position, -transform.position + player1.transform.position);
 			if(Physics.Raycast(ray,out hit)){
 				if(hit.transform.gameObject == player1){
-					p1Health.TakeDamage(Time.deltaTime);
+                    Debug.DrawLine(transform.position, player1.transform.position);
+					p1Health.TakeDamage(Time.deltaTime / (Vector3.Distance(transform.position,player1.transform.position) / 15));
 				}
 			}
-		} if (Quaternion.Angle (transform.rotation, lookAtp2) < spot.spotAngle / 2) {
+		} if (angle2 < spot.spotAngle / 2) {
 			Ray ray = new Ray (transform.position, -transform.position + player2.transform.position);
 			if(Physics.Raycast(ray,out hit)){
 				if(hit.transform.gameObject == player2){
-					p2Health.TakeDamage(Time.deltaTime);
+                    Debug.DrawLine(transform.position, player2.transform.position);
+                    p2Health.TakeDamage(Time.deltaTime / (Vector3.Distance(transform.position, player2.transform.position) / 15));
 				}
 			}
 		}
-
-//		//Debug.Log ("P2");
-//		fixatePlayer = player2.transform.position;
-//		lastKnownLocation = fixatePlayer; 
-//
-//
-//		if (fixatePlayer == player1.transform.position) {
-//			Ray ray = new Ray (transform.position, -transform.position + fixatePlayer);
-//			if(Physics.Raycast(ray,out hit)){
-//				if(hit.transform.gameObject == player1){
-//					p1Health.TakeDamage(Time.deltaTime);
-//				}
-//			}
-//		} else if (fixatePlayer == player2.transform.position) {
-//			Ray ray = new Ray (transform.position, -transform.position + fixatePlayer);
-//			if(Physics.Raycast(ray,out hit)){
-//				if(hit.transform.gameObject == player2){
-//					p2Health.TakeDamage(Time.deltaTime);
-//				}
-//			}
-//		}
 	}
 
     private void Fixate()
     {
-//		Debug.Log ("Fixate");
-//        float p1Dist = Vector3.Distance(transform.position, player1.transform.position);
-//        float p2Dist = Vector3.Distance(transform.position, player2.transform.position);
-//        if (p1Dist < p2Dist)
-//        {
-//            fixatePlayer = player1;
-//        }
-//        else
-//        {
-//            fixatePlayer = player2;
-//        }
+        float p1Dist = Vector3.Distance(transform.position, player1.transform.position);
+        float p2Dist = Vector3.Distance(transform.position, player2.transform.position);
 
-		Quaternion lookAtp1 = Quaternion.LookRotation (player1.transform.position);
-		Quaternion lookAtp2 = Quaternion.LookRotation (player2.transform.position);
+        if (p1Dist < 100 || p2Dist < 100 && (player2.activeSelf && player1.activeSelf))
+        {
+            Debug.Log("Close");
+            fixatePlayer = (p1Dist < p2Dist) ? player1.transform.position : player2.transform.position;
+        }
 
-	
-		if ((Quaternion.Angle (transform.rotation, lookAtp2) < spot.spotAngle / 2) && (Quaternion.Angle (transform.rotation, lookAtp1) < spot.spotAngle / 2)) {
-			float p1Dist = Vector3.Distance (transform.position, player1.transform.position);
-			float p2Dist = Vector3.Distance (transform.position, player2.transform.position);
+        else if ((angle1 < spot.spotAngle / 1.5) && angle2 < spot.spotAngle / 1.5 && (player2.activeSelf && player1.activeSelf))
+        {
 			if (p1Dist < p2Dist) {
 				fixatePlayer = player1.transform.position;
 			} else {
 				fixatePlayer = player2.transform.position;
 			}
 			lastKnownLocation = fixatePlayer;
-		} else if (Quaternion.Angle (transform.rotation, lookAtp1) < spot.spotAngle / 2) {
+		} else if (angle1 < spot.spotAngle / 2 && player2.activeSelf) {
 			//Debug.Log ("P1");
 			fixatePlayer = player1.transform.position;
 			lastKnownLocation = fixatePlayer;
-		} else if (Quaternion.Angle (transform.rotation, lookAtp2) < spot.spotAngle / 2) {
+		} else if (angle2 < spot.spotAngle / 2 && player2.activeSelf) {
 			//Debug.Log ("P2");
 			fixatePlayer = player2.transform.position;
-			lastKnownLocation = fixatePlayer; 
-		}else
-			fixatePlayer = lastKnownLocation;
+			lastKnownLocation = fixatePlayer;
+        }
+        else {
+            fixatePlayer = lastKnownLocation;
+        }
+			
+
+        if (fixatePlayer == player1.transform.position)
+            Debug.Log("Player1");
+        if (fixatePlayer == player2.transform.position)
+            Debug.Log("Player2");
+        if (fixatePlayer == lastKnownLocation)
+            Debug.Log("Last");
     }
 
 

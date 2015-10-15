@@ -64,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183832}
   m_LocalRotation: {x: .707105875, y: 0, z: 0, w: .707107663}
-  m_LocalPosition: {x: 0, y: 14.0500002, z: 0}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 413630}
@@ -98,6 +98,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
+  m_TargetEye: 3
   m_HDR: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -223,7 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: e9ba2083ad114a07d000fbfb8d76c639, type: 3}
-  blurAmount: .800000012
+  blurAmount: .349000007
   extraBlur: 0
 --- !u!114 &11469550
 MonoBehaviour:
@@ -292,6 +293,7 @@ ReflectionProbe:
     serializedVersion: 2
     m_Bits: 4294967039
   m_IntensityMultiplier: 1
+  m_BlendDistance: 1
   m_HDR: 1
   m_BoxProjection: 0
   m_RenderDynamicObjects: 0
@@ -323,6 +325,7 @@ ReflectionProbe:
     serializedVersion: 2
     m_Bits: 4294967005
   m_IntensityMultiplier: 1
+  m_BlendDistance: 1
   m_HDR: 1
   m_BoxProjection: 0
   m_RenderDynamicObjects: 0
