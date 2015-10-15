@@ -13,6 +13,9 @@ public class Initialize : MonoBehaviour {
         player2 = (GameObject)Instantiate(Resources.Load("Prefabs/Player"), new Vector3(2, 0.5f, 0), Quaternion.identity);
         player2.GetComponent<PlayerSetup>().player2 = true;
         player2.GetComponent<MeshRenderer>().material = (Material)Resources.Load("Materials/P2");
+		player1.GetComponent<HealthUI> ().p1 = true;
+		player2.GetComponent<HealthUI> ().p2 = true;
+
 
         player1.name = "Player1";
         player2.name = "Player2";
