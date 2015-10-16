@@ -66,7 +66,8 @@ public class PlayerAbilities : MonoBehaviour {
         temp.y = 0.01f;
         GameObject mySlingshot = (GameObject) Instantiate(Slingshot, temp, Quaternion.identity);
 		mySlingshot.GetComponent<Slingshot>().owner = gameObject;
-        SlingshotCooldown = 2.0f;
+		mySlingshot.GetComponent<Slingshot> ().detonateKey = p1a2;
+        SlingshotCooldown = 6.0f;
     }
 
     void Player2Ability1()

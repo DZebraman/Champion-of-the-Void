@@ -21,7 +21,7 @@ public class EnergyWave : MonoBehaviour {
 		temp.z += (10.0f * Time.deltaTime);
         transform.localScale = temp;
 
-        if (lifeSpan <= 0.0f)
+		if (lifeSpan <= 0.0f)
         {
 			if (boss != null){
 				Ray ray = new Ray (transform.position, -transform.position + boss.transform.position);
@@ -34,7 +34,7 @@ public class EnergyWave : MonoBehaviour {
 						}
 					}
 				}
-				boss.GetComponent<LightBossScript>().lastKnownLocation = transform.position;
+				boss.GetComponent<LightBossScript>().fixateTarget = transform.position;
 			}
             Destroy(gameObject);
         }

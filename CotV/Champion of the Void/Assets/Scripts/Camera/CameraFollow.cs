@@ -39,11 +39,18 @@ public class CameraFollow : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        target = FindTarget();
+		if (p1.activeSelf && p2.activeSelf) {
+			target = FindTarget ();
+			target.y = (Vector3.Distance(p1.transform.position, p2.transform.position) / 1.125f > dist)?Vector3.Distance(p1.transform.position, p2.transform.position) / 1.125f : dist;
+		} else if (p1.activeSelf) {
+			target = p1.transform.position;
+			target.y = dist;
+		} else if (p2.activeSelf) {
+			target = p2.transform.position;
+			target.y = dist;
+		}
 
         //Debug.Log(Vector3.Distance(p1.transform.position, p2.transform.position) / transform.position.y);
-
-        target.y = (Vector3.Distance(p1.transform.position, p2.transform.position) / 1.125f > dist)?Vector3.Distance(p1.transform.position, p2.transform.position) / 1.125f : dist;
 
         transform.position = Vector3.Lerp(transform.position, target, speed * Time.deltaTime);
 	}

@@ -8,6 +8,7 @@ public class Slingshot : MonoBehaviour {
 
     public GameObject EnergyWave;
 	public GameObject owner;
+	public KeyCode detonateKey;
 	float lerpSpeed = 4.0f;
 	Vector3 vel;
 	float maxVel = 0.5f;
@@ -37,7 +38,7 @@ public class Slingshot : MonoBehaviour {
 
         lifeSpan -= Time.deltaTime;
 
-		if (lifeSpan <= 0.0f) {
+		if (lifeSpan <= 0.0f || (slingSpan <= 0.0f && Input.GetKey(detonateKey))) {
             Vector3 temp2 = transform.position;
             temp2.y = 0.01f;
             GameObject.Instantiate(EnergyWave, temp2, Quaternion.identity);
