@@ -9,7 +9,7 @@ public class LightBossScript : MonoBehaviour
 
     private Light spot;
     public Vector3 fixateTarget;
-	//public Vector3 lastKnownLocation;
+
     private GameObject player1;
     private GameObject player2;
 
@@ -124,12 +124,47 @@ public class LightBossScript : MonoBehaviour
 		}
 	}
 
+	private void Fixate2(){
+		float p1Dist = Vector3.Distance(transform.position, player1.transform.position);
+		float p2Dist = Vector3.Distance(transform.position, player2.transform.position);
+		
+		GameObject fixatePlayer = null;
+
+		if (!wander) {
+			for (int i = 0; i < wanderPath.Length; i++) {
+				GameObject obj = wanderPath [i];
+				if (Vector3.Distance (transform.position, obj.transform.position) < Vector3.Distance (wanderPath [lastWanderIndex].transform.position, transform.position)) {
+					fixatePlayer = obj;
+					lastWanderIndex = i;
+				}
+			}
+			wander = true;
+		}
+
+		if ((angle1 < spot.spotAngle / 1.5) && angle2 < spot.spotAngle / 1.5  || (p1Dist < 10 || p2Dist < 10)) {
+			if (p1Dist < p2Dist) {
+				fixatePlayer = (player1.activeSelf)? player1:null;
+			} else {
+				fixatePlayer = (player2.activeSelf)? player2:null;
+			}
+		} else if (angle1 < spot.spotAngle / 2) {
+			fixatePlayer = (player1.activeSelf)? player1:null;
+		} else if (angle2 < spot.spotAngle / 2)  {
+			fixatePlayer = (player2.activeSelf)? player2:null;
+		}
+
+	}
+
+
     private void Fixate()
     {
         float p1Dist = Vector3.Distance(transform.position, player1.transform.position);
         float p2Dist = Vector3.Distance(transform.position, player2.transform.position);
 
 		GameObject fixatePlayer = null;
+
+
+
 		if (player1.activeSelf && p1Dist < 10) {
 			if (p1Dist < p2Dist && player2.activeSelf) {
 				wander = false;
