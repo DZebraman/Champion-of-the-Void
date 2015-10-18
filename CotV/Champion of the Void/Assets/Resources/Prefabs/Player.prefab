@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player2: 0
   accelAmount: .03125
-  maxSpeed: 1
+  maxSpeed: 1.25
 --- !u!114 &11494650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -212,7 +212,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: maxSpeed
-      value: 1
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Shadows.m_Type

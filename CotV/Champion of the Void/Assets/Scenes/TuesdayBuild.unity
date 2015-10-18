@@ -1659,6 +1659,14 @@ Prefab:
       propertyPath: wanderPath.Array.data[7]
       value: 
       objectReference: {fileID: 2059421969}
+    - target: {fileID: 11477874, guid: 6ccbb1bd3ee2f2e45a5ee520826b7997, type: 2}
+      propertyPath: maxSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11477874, guid: 6ccbb1bd3ee2f2e45a5ee520826b7997, type: 2}
+      propertyPath: turnSpeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ccbb1bd3ee2f2e45a5ee520826b7997, type: 2}
   m_IsPrefabParent: 0

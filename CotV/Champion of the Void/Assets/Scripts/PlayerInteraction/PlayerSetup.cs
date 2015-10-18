@@ -27,7 +27,7 @@ public class PlayerSetup : MonoBehaviour {
         vel += acc;
         if (vel.magnitude > maxSpeed)
         {
-            vel = vel.normalized * maxSpeed;
+            vel = vel.normalized * maxSpeed * Time.deltaTime;
         }
         controller.Move(vel);
 	}
