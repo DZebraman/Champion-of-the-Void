@@ -131,14 +131,14 @@ public class LightBossScript : MonoBehaviour
 	private void Damage(){
 		RaycastHit hit;
 
-		if(player1Raycast){
-			p1Health.TakeDamage(Time.deltaTime / (Vector3.Distance(transform.position,player1.transform.position) / 15));
-		}
-		if(player2Raycast){
-			p2Health.TakeDamage(Time.deltaTime / (Vector3.Distance(transform.position, player2.transform.position) / 15));
-		}
+//		if(player1Raycast){
+//			p1Health.TakeDamage(Time.deltaTime / (Vector3.Distance(transform.position,player1.transform.position) / 15));
+//		}
+//		if(player2Raycast){
+//			p2Health.TakeDamage(Time.deltaTime / (Vector3.Distance(transform.position, player2.transform.position) / 15));
+//		}
 
-		/*
+
 		if ( angle1< spot.spotAngle / 2) {
 			Ray ray = new Ray (transform.position, -transform.position + player1.transform.position);
 			if(Physics.Raycast(ray,out hit)){
@@ -156,7 +156,7 @@ public class LightBossScript : MonoBehaviour
 				}
 			}
 		}
-		*/
+
 
 	}
 

@@ -21,22 +21,22 @@ public class PlayerAbilities : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKey(p1a1) && !GetComponent<PlayerSetup>().player2 && EnergyWaveCooldown < 0.0f)
+        if ((Input.GetKey(p1a1)||Input.GetButtonDown("LB")) && !GetComponent<PlayerSetup>().player2 && EnergyWaveCooldown < 0.0f)
         {
             Player1Ability1();
         }
 
-        if (Input.GetKey(p1a2) && !GetComponent<PlayerSetup>().player2 && SlingshotCooldown < 0.0f)
+		if ((Input.GetKey(p1a2)||Input.GetAxis("LT") > 0.1) && !GetComponent<PlayerSetup>().player2 && SlingshotCooldown < 0.0f)
         {
             Player1Ability2();
         }
 
-        if (Input.GetKey(p2a1) && GetComponent<PlayerSetup>().player2 && EnergyWaveCooldown < 0.0f)
+        if ((Input.GetKey(p2a1)||Input.GetButtonDown("RB")) && GetComponent<PlayerSetup>().player2 && EnergyWaveCooldown < 0.0f)
         {
             Player2Ability1();
         }
 
-        if (Input.GetKey(p2a2) && GetComponent<PlayerSetup>().player2 && EnergyWaveCooldown < 0.0f)
+		if ((Input.GetKey(p2a2)||Input.GetAxis("RT") > 0.1) && GetComponent<PlayerSetup>().player2 && EnergyWaveCooldown < 0.0f)
         {
             Player2Ability2();
         }

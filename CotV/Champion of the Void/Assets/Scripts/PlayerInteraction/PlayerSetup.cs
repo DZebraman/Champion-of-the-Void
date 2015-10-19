@@ -7,6 +7,8 @@ public class PlayerSetup : MonoBehaviour {
     public bool player2;
     public float accelAmount,maxSpeed;
 
+	public bool useController;
+
     private Vector3 vel, acc;
 
     private CharacterController controller;
@@ -22,7 +24,10 @@ public class PlayerSetup : MonoBehaviour {
         vel *= 0.85f;
         acc = Vector3.zero;
 
-        CheckKeyboard();
+		if(useController)
+			CheckContoller();
+        else
+			CheckKeyboard();
 
         vel += acc;
         if (vel.magnitude > maxSpeed)
@@ -30,6 +35,17 @@ public class PlayerSetup : MonoBehaviour {
             vel = vel.normalized * maxSpeed * Time.deltaTime;
         }
         controller.Move(vel);
+	}
+
+	void CheckContoller(){
+		if(!player2){
+			acc.z = -Input.GetAxis("LStickX") * 0.5f;
+			acc.x = Input.GetAxis("LStickY") * 0.5f;
+		}
+		else{
+			acc.z = -Input.GetAxis("RStickX") * 0.5f;
+			acc.x = Input.GetAxis("RStickY") * 0.5f;
+		}
 	}
 
     void CheckKeyboard(){
