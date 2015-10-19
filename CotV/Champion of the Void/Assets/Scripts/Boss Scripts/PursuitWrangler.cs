@@ -30,6 +30,7 @@ public class PursuitWrangler : MonoBehaviour {
 		acc = Vector3.Lerp(acc.normalized,dv,Time.deltaTime * lerpSpeed);
 	}
 
+	/*
 	Vector3 AvoidObstacle (GameObject obst, float safeDistance)
 	{ 
 		dv = Vector3.zero;
@@ -69,7 +70,7 @@ public class PursuitWrangler : MonoBehaviour {
 		//dv.y = 0;		   // only steer in the x/z plane
 		return dv;
 	}
-
+	*/
 	// Update is called once per frame
 	void Update () {
 	
