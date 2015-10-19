@@ -169,7 +169,7 @@ MonoBehaviour:
   player2: 0
   accelAmount: .03125
   maxSpeed: 1.25
-  useController: 1
+  useController: 0
 --- !u!114 &11494650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -241,7 +241,7 @@ Prefab:
       objectReference: {fileID: 150434, guid: d0d9452cd56bfd24a8b40ae88538758e, type: 2}
     - target: {fileID: 0}
       propertyPath: useController
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
