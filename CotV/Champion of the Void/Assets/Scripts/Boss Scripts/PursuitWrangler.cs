@@ -12,67 +12,67 @@ public class PursuitWrangler : MonoBehaviour {
 
 	public float lerpSpeed;
 	public float maxSpeed;
+	public float seekWeight;
+
+	private CharacterController control;
+
+	private LightBossScript lightBoss;
+
+	private Light spot;
 
 	// Use this for initialization
 	void Start () {
 		obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
-		vel = Vector3.zero;
+		lightBoss =  GameObject.Find("Bossman").GetComponent<LightBossScript>();
+		spot = transform.FindChild("Spotlight").GetComponent<Light>();
+		//vel = ogPos - transform.position;
+		//vel = vel.normalized * maxSpeed/2;
 		acc = Vector3.zero;
+		vel = Vector3.zero;
+		control = GetComponent<CharacterController>();
+
 	}
 
 	void ProcessMovement(){
-
+		vel *= 0.95f;
+		vel += transform.forward * 2 * Time.deltaTime;
+		vel *= Mathf.Clamp(Vector3.Distance(transform.position,target.transform.position)/10,0.85f,1);
+		vel = Vector3.ClampMagnitude(vel,maxSpeed);
 	}
 
 	void Seek(){
-		dv = transform.position - target.transform.position;
-		dv = dv.normalized * acc.magnitude;
-		acc = Vector3.Lerp(acc.normalized,dv,Time.deltaTime * lerpSpeed);
+		//transform.forward = vel.normalized;
+		Quaternion tempRot = transform.rotation;
+		
+		transform.LookAt (target.transform);
+		transform.rotation = Quaternion.Lerp (tempRot, transform.rotation, Time.deltaTime * lerpSpeed);
 	}
 
-	/*
-	Vector3 AvoidObstacle (GameObject obst, float safeDistance)
-	{ 
-		dv = Vector3.zero;
+	void RayCheck(){
+		RaycastHit hit;
+		Vector3 toP1 = target.transform.position - transform.position;
 		
-		//vector from vehicle to center of obstacle
-		Vector3 vecToCenter = obst.transform.position - transform.position;
+		float angle1 = Vector3.Angle(transform.forward, toP1);
 
-		// distance should not be allowed to be zero or negative because 
-		// later we will divide by it and do not want to divide by zero
-		// or cause an inadvertent sign change.
-		float dist = Mathf.Max(vecToCenter.magnitude - obRadius - radius, 0.1f);
-		
-		// if too far to worry about, out of here
-		if (dist > safeDistance)
-			return Vector3.zero;
-		
-		//if behind us, out of here
-		if (Vector3.Dot (vecToCenter, transform.forward) < 0)
-			return Vector3.zero;
-		
-		float rightDotVTC = Vector3.Dot (vecToCenter, transform.right);
-		
-		//if we can pass safely, out of here
-		if (Mathf.Abs (rightDotVTC) > radius + obRadius)
-			return Vector3.zero;
-		
-		//if we get this far, than we need to steer
-		
-		//obstacle is on right so we steer to left
-		if (rightDotVTC > 0)
-			dv = transform.right * -maxSpeed * safeDistance / dist;
-		else
-			//obstacle on left so we steer to right
-			dv = transform.right * maxSpeed * safeDistance / dist;
-		
-		dv -= vel;    //calculate the steering force
-		//dv.y = 0;		   // only steer in the x/z plane
-		return dv;
+		if ( angle1< spot.spotAngle / 2) {
+			Ray ray = new Ray (transform.position, -transform.position + target.transform.position);
+			if(Physics.Raycast(ray,out hit)){
+				if(hit.transform.gameObject == target){
+					Debug.DrawLine(transform.position, target.transform.position);
+					lightBoss.fixatePlayer = target;
+				}
+			}
+		}
 	}
-	*/
+
+
 	// Update is called once per frame
 	void Update () {
-	
+		Seek ();
+		RayCheck();
+		ProcessMovement();
+		//Debug.Log(vel);
+		control.Move(vel);
+		//transform.position += vel;
 	}
 }

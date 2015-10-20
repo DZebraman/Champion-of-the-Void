@@ -17,6 +17,9 @@ public class LightBossScript : MonoBehaviour
 	private PathNode[] wanderPath2;
 	private PathNode wanderTarget;
 
+	private GameObject[] Pursuers;
+	public int numPursuers;
+
 	private int lastWanderIndex;
 	private bool wander;
 
@@ -36,7 +39,7 @@ public class LightBossScript : MonoBehaviour
 	public float turnSpeed;
 
 	GameObject fixatePlayerOld;
-	GameObject fixatePlayer;
+	public GameObject fixatePlayer;
 
     Vector3 toP1;
     Vector3 toP2;
@@ -46,6 +49,8 @@ public class LightBossScript : MonoBehaviour
 
 	bool player1Raycast;
 	bool player2Raycast;
+
+	public float pursuerOffset;
 
     // Use this for initialization
     public void Init()
@@ -67,6 +72,15 @@ public class LightBossScript : MonoBehaviour
 
 		for (int i = 0; i < wanderPath2.Length; i++) {
 			wanderPath2[i].next = (i+1 == wanderPath2.Length) ? wanderPath2[0]:wanderPath2[i+1];
+		}
+
+		Pursuers = new GameObject[numPursuers];
+
+		Vector3 offset = new Vector3(pursuerOffset,0,0);
+		for(int i = 0; i < numPursuers; i++){
+			Pursuers[i] = (GameObject)Instantiate(Resources.Load("Prefabs/Pursuer"),transform.position+offset,Quaternion.identity);
+			Pursuers[i].GetComponent<PursuitWrangler>().target = (i < numPursuers/2)?player1:player2;
+			offset = (Quaternion.Euler(0,(360/numPursuers) * i,0) * offset) + new Vector3(Random.Range(0,10),0,Random.Range(0,10));
 		}
 
 		controller = GetComponent<CharacterController> ();
@@ -206,7 +220,7 @@ public class LightBossScript : MonoBehaviour
 
 		FollowPath();
 
-		if ((player1Raycast || player2Raycast)  || (p1Dist < 10 || p2Dist < 10)) {
+		if ((player1Raycast || player2Raycast)  || (p1Dist < 10 || p2Dist < 10) || fixatePlayer != null) {
 			if (p1Dist < p2Dist) {
 				fixatePlayer = (player1.activeSelf)? player1:null;
 			} else {
