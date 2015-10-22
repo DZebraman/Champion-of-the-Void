@@ -5,6 +5,7 @@ public class PursuitWrangler : MonoBehaviour {
 
 	public GameObject Pursuer;
 	public GameObject target;
+    public GameObject player1, player2;
 
 	private GameObject[] obstacles;
 
@@ -19,15 +20,20 @@ public class PursuitWrangler : MonoBehaviour {
 	private LightBossScript lightBoss;
 
 	private Light spot;
+    private Color lightOriginalColor;
 
 	// Use this for initialization
 	void Start () {
 		obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
 		lightBoss =  GameObject.Find("Bossman").GetComponent<LightBossScript>();
+        
 		spot = transform.FindChild("Spotlight").GetComponent<Light>();
-		//vel = ogPos - transform.position;
-		//vel = vel.normalized * maxSpeed/2;
-		acc = Vector3.zero;
+
+        lightOriginalColor = spot.color;
+
+        //vel = ogPos - transform.position;
+        //vel = vel.normalized * maxSpeed/2;
+        acc = Vector3.zero;
 		vel = Vector3.zero;
 		control = GetComponent<CharacterController>();
 
@@ -36,7 +42,7 @@ public class PursuitWrangler : MonoBehaviour {
 	void ProcessMovement(){
 		vel *= 0.95f;
 		vel += transform.forward * 2 * Time.deltaTime;
-		vel *= Mathf.Clamp(Vector3.Distance(transform.position,target.transform.position)/10,0.85f,1);
+		vel *= Mathf.Clamp(Vector3.Distance(transform.position,target.transform.position)/10,0.4f,1);
 		vel = Vector3.ClampMagnitude(vel,maxSpeed);
 	}
 
@@ -54,20 +60,27 @@ public class PursuitWrangler : MonoBehaviour {
 		
 		float angle1 = Vector3.Angle(transform.forward, toP1);
 
-		if ( angle1< spot.spotAngle / 2) {
+		if ( angle1< spot.spotAngle / 2 && Vector3.Distance(target.transform.position,transform.position) < 10) {
 			Ray ray = new Ray (transform.position, -transform.position + target.transform.position);
 			if(Physics.Raycast(ray,out hit)){
 				if(hit.transform.gameObject == target){
 					Debug.DrawLine(transform.position, target.transform.position);
-					lightBoss.fixatePlayer = target;
+                    spot.color = new Color(0.25f,0.1f,0.8f,0.5f);
+                    lightBoss.fixatePlayer = target;
 				}
 			}
 		}
-	}
+        else
+            spot.color = lightOriginalColor;
+    }
 
 
 	// Update is called once per frame
 	void Update () {
+        if (!target.activeSelf)
+        {
+            target = (target == player1) ? player2 : player1;
+        }
 		Seek ();
 		RayCheck();
 		ProcessMovement();

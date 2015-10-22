@@ -47,6 +47,9 @@ public class LightBossScript : MonoBehaviour
     float angle1;
     float angle2;
 
+    float spotAngleInit;
+    float spotRangeInit;
+
 	bool player1Raycast;
 	bool player2Raycast;
 
@@ -79,8 +82,11 @@ public class LightBossScript : MonoBehaviour
 		Vector3 offset = new Vector3(pursuerOffset,0,0);
 		for(int i = 0; i < numPursuers; i++){
 			Pursuers[i] = (GameObject)Instantiate(Resources.Load("Prefabs/Pursuer"),transform.position+offset,Quaternion.identity);
-			Pursuers[i].GetComponent<PursuitWrangler>().target = (i < numPursuers/2)?player1:player2;
-			offset = (Quaternion.Euler(0,(360/numPursuers) * i,0) * offset) + new Vector3(Random.Range(0,10),0,Random.Range(0,10));
+			PursuitWrangler wrangler = Pursuers[i].GetComponent<PursuitWrangler>();
+            wrangler.target = (i < numPursuers/2)?player1:player2;
+            wrangler.player1 = player1;
+            wrangler.player2 = player2;
+            offset = (Quaternion.Euler(0,(360/numPursuers) * i,0) * offset) + new Vector3(Random.Range(0,10),0,Random.Range(0,10));
 		}
 
 		controller = GetComponent<CharacterController> ();
@@ -88,11 +94,14 @@ public class LightBossScript : MonoBehaviour
 
 		wanderTarget = wanderPath2[6];
 
+        spotAngleInit = spot.spotAngle;
+        spotRangeInit = spot.range;
+
 		//RandomSearch ();
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
 
 		Debug.DrawLine(this.transform.position,wanderTarget.position);
@@ -101,34 +110,16 @@ public class LightBossScript : MonoBehaviour
 		TurnToFace ();
 		ProcessMovement ();
 		Damage ();
-        /*
-		if (Vector3.Distance (transform.position, player1.transform.position) < 10.0f) {
-			lastKnownLocation = player1.transform.position;
-		}
-		if (Vector3.Distance (transform.position, player2.transform.position) < 10.0f) {
-			lastKnownLocation = player2.transform.position;
-		}
-        */
-//		if (Vector3.Distance (transform.position, lastKnownLocation) < 2) {
-//			RandomSearch();
-//		}
-//    }
-//
-//	private void RandomSearch(){
-//		lastKnownLocation.x = Random.Range (-100, 100);
-//		lastKnownLocation.y =  0.5f;
-//		lastKnownLocation.z = Random.Range (-100, 100);
-	}
+        if (fixatePlayer == player1 || fixatePlayer == player2)
+            Debug.Log("Following Player");
+
+        spot.spotAngle = Mathf.Lerp(spot.spotAngle, spotAngleInit, 0.5f*Time.deltaTime);
+        spot.range = Mathf.Lerp(spot.range, spotRangeInit, Time.deltaTime);
+    }
 
 	private void FollowPath()
 	{
-//		print ("following path");
-//		if (Vector3.Distance (transform.position, wanderPath[lastWanderIndex].transform.position) < 5) {
-//			lastWanderIndex++;
-//			lastWanderIndex = lastWanderIndex % wanderPath.Length;
-//		}
-//		fixateTarget = wanderPath[lastWanderIndex].transform.position;
-//		fixateTarget.y = transform.position.y;
+
 
 		//Finds unSqrt distance between this and target
 		//if less, goes to next position in the linked list;
@@ -153,20 +144,20 @@ public class LightBossScript : MonoBehaviour
 //		}
 
 
-		if ( angle1< spot.spotAngle / 2) {
+		if ( angle1< spot.spotAngle / 2 && Vector3.Distance(player1.transform.position, transform.position) < spot.range) {
 			Ray ray = new Ray (transform.position, -transform.position + player1.transform.position);
 			if(Physics.Raycast(ray,out hit)){
 				if(hit.transform.gameObject == player1){
                     Debug.DrawLine(transform.position, player1.transform.position);
-					p1Health.TakeDamage(Time.deltaTime / (Vector3.Distance(transform.position,player1.transform.position) / 15));
+					p1Health.TakeDamage(Time.deltaTime / (Vector3.Distance(transform.position,player1.transform.position) / 5));
 				}
 			}
-		}if (angle2 < spot.spotAngle / 2) {
+		}if (angle2 < spot.spotAngle / 2 && Vector3.Distance(player2.transform.position, transform.position) < spot.range) {
 			Ray ray = new Ray (transform.position, -transform.position + player2.transform.position);
 			if(Physics.Raycast(ray,out hit)){
 				if(hit.transform.gameObject == player2){
 					Debug.DrawLine(transform.position, player2.transform.position);
-					p2Health.TakeDamage(Time.deltaTime / (Vector3.Distance(transform.position,player2.transform.position) / 15));
+					p2Health.TakeDamage(Time.deltaTime / (Vector3.Distance(transform.position,player2.transform.position) / 5));
 				}
 			}
 		}
@@ -185,7 +176,7 @@ public class LightBossScript : MonoBehaviour
 
 		if ( angle1< spot.spotAngle / 2) {
 			Ray ray = new Ray (transform.position, -transform.position + player1.transform.position);
-			if(Physics.Raycast(ray,out hit)){
+			if(Physics.Raycast(ray,out hit,40)){
 				if(hit.transform.gameObject == player1){
 					Debug.DrawLine(transform.position, player1.transform.position);
 					player1Raycast = true;
@@ -195,7 +186,7 @@ public class LightBossScript : MonoBehaviour
 			player1Raycast = false;
 		}if (angle2 < spot.spotAngle / 2) {
 			Ray ray = new Ray (transform.position, -transform.position + player2.transform.position);
-			if(Physics.Raycast(ray,out hit)){
+			if(Physics.Raycast(ray,out hit,40)){
 				if(hit.transform.gameObject == player2){
 					Debug.DrawLine(transform.position, player2.transform.position);
 					player2Raycast = true;
@@ -206,6 +197,21 @@ public class LightBossScript : MonoBehaviour
 		}
 	}
 
+    private void RangeAngleMod(float p1Dist,float p2Dist)
+    {
+        if (p1Dist < 20 || p2Dist < 20)
+        {
+            spot.spotAngle = Mathf.Lerp(spot.spotAngle, spotAngleInit, 5 *Time.deltaTime);
+            spot.range = Mathf.Lerp(spot.range,spotRangeInit,Time.deltaTime);
+        }
+        else
+        {
+            Debug.Log(spot.spotAngle);
+            spot.spotAngle = Mathf.Lerp(spot.spotAngle, 2, 5* Time.deltaTime);
+            spot.range = Mathf.Lerp(spot.range, 1000, Time.deltaTime);
+        }
+    }
+
 	private void Fixate(){
 
 		//Took the old code and organized it.
@@ -215,8 +221,8 @@ public class LightBossScript : MonoBehaviour
 		float p1Dist = Vector3.Distance(transform.position, player1.transform.position);
 		float p2Dist = Vector3.Distance(transform.position, player2.transform.position);
 
-		fixatePlayerOld = fixatePlayer;
-		fixatePlayer = null;
+		
+		
 
 		FollowPath();
 
@@ -226,11 +232,16 @@ public class LightBossScript : MonoBehaviour
 			} else {
 				fixatePlayer = (player2.activeSelf)? player2:null;
 			}
+            RangeAngleMod(p1Dist,p2Dist);
 		} else if (angle1 < spot.spotAngle / 2 && player1Raycast && player2Raycast) {
 			fixatePlayer = (player1.activeSelf)? player1:null;
-		} else if (angle2 < spot.spotAngle / 2 && player1Raycast && player2Raycast)  {
+            RangeAngleMod(p1Dist,p2Dist);
+        } else if (angle2 < spot.spotAngle / 2 && player1Raycast && player2Raycast)  {
 			fixatePlayer = (player2.activeSelf)? player2:null;
-		}
+            RangeAngleMod(p1Dist, p2Dist);
+        }
+
+        
 		//Fixateplayer will always override the path following, but it always defaults to path
 		fixateTarget = (fixatePlayer == null)?fixateTarget:fixatePlayer.transform.position;
 
@@ -248,130 +259,14 @@ public class LightBossScript : MonoBehaviour
 				}
 			}
 		}
-	}
-
-	/*
-    private void Fixate()
-    {
-        float p1Dist = Vector3.Distance(transform.position, player1.transform.position);
-        float p2Dist = Vector3.Distance(transform.position, player2.transform.position);
-
-		GameObject fixatePlayer = null;
-
-
-
-		if (player1.activeSelf && p1Dist < 10) {
-			if (p1Dist < p2Dist && player2.activeSelf) {
-				wander = false;
-				fixatePlayer = player1;
-			}
-			else{
-				wander = false;
-				fixatePlayer = player1;
-			}
-		}else if(player2.activeSelf && p2Dist < 10){
-			if(p2Dist < p1Dist && player1.activeSelf){
-				wander = false;
-				fixatePlayer = player2;
-			}
-			else{
-				wander = false;
-				fixatePlayer = player2;
-			}
-		}
-
-		if ((angle1 < spot.spotAngle / 1.5) && angle2 < spot.spotAngle / 1.5 && (player2.activeSelf && player1.activeSelf)) {
-			if (p1Dist < p2Dist) {
-				fixatePlayer = player1;
-			} else {
-				fixatePlayer = player2;
-			}
-		} else if (angle1 < spot.spotAngle / 2 && player2.activeSelf) {
-			//Debug.Log ("P1");
-			fixatePlayer = player1;
-		} else if (angle2 < spot.spotAngle / 2 && player2.activeSelf) {
-			//Debug.Log ("P2");
-			fixatePlayer = player2;
-		} else {
-			if (!wander) {
-				for (int i = 0; i < wanderPath.Length; i++) {
-					GameObject obj = wanderPath [i];
-					if (Vector3.Distance (transform.position, obj.transform.position) < Vector3.Distance (wanderPath [lastWanderIndex].transform.position, transform.position)) {
-						fixatePlayer = obj;
-						lastWanderIndex = i;
-					}
-				}
-				wander = true;
-			}
-//			if (wander) {
-//
-//			}
-		}
-		if (fixatePlayer == player1 && !player1.activeSelf) {
-			fixatePlayer = wanderPath[lastWanderIndex];
-			wander = true;
-		}
-		if (fixatePlayer == player2 && !player2.activeSelf) {
-			fixatePlayer = wanderPath[lastWanderIndex];
-			wander = true;
-		}
-
-		if (fixatePlayer != null) {
-			fixateTarget = fixatePlayer.transform.position;
-			fixateTarget.y = gameObject.transform.position.y;
-		}
-
-		         
-
-//        if (p1Dist < 100 || p2Dist < 100 && (player2.activeSelf && player1.activeSelf))
-//        {
-//            Debug.Log("Close");
-//            fixateTarget = (p1Dist < p2Dist) ? player1.transform.position : player2.transform.position;
-//        }
-//
-//        else if ((angle1 < spot.spotAngle / 1.5) && angle2 < spot.spotAngle / 1.5 && (player2.activeSelf && player1.activeSelf))
-//        {
-//			if (p1Dist < p2Dist) {
-//				fixateTarget = player1.transform.position;
-//			} else {
-//				fixateTarget = player2.transform.position;
-//			}
-//			lastKnownLocation = fixateTarget;
-//		} else if (angle1 < spot.spotAngle / 2 && player2.activeSelf) {
-//			//Debug.Log ("P1");
-//			fixateTarget = player1.transform.position;
-//			lastKnownLocation = fixateTarget;
-//		} else if (angle2 < spot.spotAngle / 2 && player2.activeSelf) {
-//			//Debug.Log ("P2");
-//			fixateTarget = player2.transform.position;
-//			lastKnownLocation = fixateTarget;
-//        }
-//        else {
-//            fixateTarget = lastKnownLocation;
-//        }
-//        if (fixateTarget == player1.transform.position)
-//            Debug.Log("Player1");
-//        if (fixateTarget == player2.transform.position)
-//            Debug.Log("Player2");
-//        if (fixateTarget == lastKnownLocation)
-//            Debug.Log("Last");
+        fixatePlayerOld = fixatePlayer;
+        fixatePlayer = null;
     }
 
-*/
-
 	void ProcessMovement(){
-		//vel *= 0.1f;
-		accel = Vector3.zero;
-
-		Vector3 dv = fixateTarget - transform.position;
-
-		accel = vel - dv;
-		accel.y = 0;
-		//accel = accel.normalized * -maxSpeed;
-
-		vel += accel;
-
-		vel = vel.normalized * -maxSpeed * Time.deltaTime;
+		vel *= 0.95f;
+		vel += transform.forward * 2 * Time.deltaTime;
+		vel = Vector3.ClampMagnitude(vel,maxSpeed);
 
 		//transform.position += vel;
 		controller.Move (vel);
@@ -383,7 +278,13 @@ public class LightBossScript : MonoBehaviour
 		Quaternion tempRot = transform.rotation;
 
 		transform.LookAt (fixateTarget);
-		transform.rotation = Quaternion.Lerp (tempRot, transform.rotation, Time.deltaTime * turnSpeed);
-			//Quaternion.Lerp(transform.rotation,transform.LookAt(fixateTarget.transform.position),Time.deltaTime);
+        if (Vector3.Distance(transform.position, fixateTarget) < 10)
+        {
+            Debug.Log("Butts");
+            transform.rotation = Quaternion.Lerp(tempRot, transform.rotation, Time.deltaTime * turnSpeed * 4);
+        }
+        else
+            transform.rotation = Quaternion.Lerp(tempRot, transform.rotation, Time.deltaTime * turnSpeed);
+        //Quaternion.Lerp(transform.rotation,transform.LookAt(fixateTarget.transform.position),Time.deltaTime);
     }
 }

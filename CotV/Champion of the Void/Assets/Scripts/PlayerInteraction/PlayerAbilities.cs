@@ -87,22 +87,22 @@ public class PlayerAbilities : MonoBehaviour {
 		if (EnergyWaveCooldown >= 0.0f && !GetComponent<PlayerSetup>().player2)
         {
             EnergyWaveCooldown -= Time.deltaTime;
-			p1a1CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(0, 70, EnergyWaveCooldown));
+			p1a1CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(70, 0, EnergyWaveCooldown));
         }
 		if (SlingshotCooldown >= 0.0f && !GetComponent<PlayerSetup>().player2)
 		{
 			SlingshotCooldown -= Time.deltaTime;
-			p1a2CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(0, 70, SlingshotCooldown));
+			p1a2CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(70, 0, SlingshotCooldown));
 		}
 		if (EnergyWaveCooldown >= 0.0f && GetComponent<PlayerSetup>().player2)
 		{
 			EnergyWaveCooldown -= Time.deltaTime;
-			p2a1CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(0, 70, EnergyWaveCooldown));
+			p2a1CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(70, 0, EnergyWaveCooldown));
 		}
 		if (EnergyWaveCooldown >= 0.0f && GetComponent<PlayerSetup>().player2)
 		{
 			EnergyWaveCooldown -= Time.deltaTime;
-			p2a2CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(0, 70, EnergyWaveCooldown));
+			p2a2CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(70, 0, EnergyWaveCooldown));
 		}
 
 		// ReEnable all buttons after cooldown
