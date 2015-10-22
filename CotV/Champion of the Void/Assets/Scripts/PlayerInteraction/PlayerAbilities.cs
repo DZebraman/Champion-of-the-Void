@@ -38,25 +38,44 @@ public class PlayerAbilities : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if ((Input.GetKey(p1a1)||Input.GetButtonDown("LB")) && !GetComponent<PlayerSetup>().player2 && EnergyWaveCooldown < 0.0f)
+
 		// Do ablility and disable button
         if (Input.GetKey(p1a1) && !GetComponent<PlayerSetup>().player2 && EnergyWaveCooldown < 0.0f)
+
         {
 			Player1Ability1();
 			p1a1Button.GetComponent<Button>().interactable = false;
         }
+
+
+		if ((Input.GetKey(p1a2)||Input.GetAxis("LT") > 0.1) && !GetComponent<PlayerSetup>().player2 && SlingshotCooldown < 0.0f)
+
         if (Input.GetKey(p1a2) && !GetComponent<PlayerSetup>().player2 && SlingshotCooldown < 0.0f)
+
         {
 			Player1Ability2();
 			p1a2Button.GetComponent<Button>().interactable = false;
         }
+
+
+        if ((Input.GetKey(p2a1)||Input.GetButtonDown("RB")) && GetComponent<PlayerSetup>().player2 && EnergyWaveCooldown < 0.0f)
+
         if (Input.GetKey(p2a1) && GetComponent<PlayerSetup>().player2 && EnergyWaveCooldown < 0.0f)
+
         {
 			Player2Ability1();
 			// Change this when we get new ability for p2
 			p2a1Button.GetComponent<Button>().interactable = false;
 			p2a2Button.GetComponent<Button>().interactable = false;
         }
+
+
+		if ((Input.GetKey(p2a2)||Input.GetAxis("RT") > 0.1) && GetComponent<PlayerSetup>().player2 && EnergyWaveCooldown < 0.0f)
+
         if (Input.GetKey(p2a2) && GetComponent<PlayerSetup>().player2 && EnergyWaveCooldown < 0.0f)
+
         {
 			Player2Ability2();
 			// Change this when we get new ability for p2
@@ -68,22 +87,22 @@ public class PlayerAbilities : MonoBehaviour {
 		if (EnergyWaveCooldown >= 0.0f && !GetComponent<PlayerSetup>().player2)
         {
             EnergyWaveCooldown -= Time.deltaTime;
-			p1a1CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(0, 70, EnergyWaveCooldown));
+			p1a1CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(70, 0, EnergyWaveCooldown));
         }
 		if (SlingshotCooldown >= 0.0f && !GetComponent<PlayerSetup>().player2)
 		{
 			SlingshotCooldown -= Time.deltaTime;
-			p1a2CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(0, 70, SlingshotCooldown));
+			p1a2CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(70, 0, SlingshotCooldown));
 		}
 		if (EnergyWaveCooldown >= 0.0f && GetComponent<PlayerSetup>().player2)
 		{
 			EnergyWaveCooldown -= Time.deltaTime;
-			p2a1CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(0, 70, EnergyWaveCooldown));
+			p2a1CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(70, 0, EnergyWaveCooldown));
 		}
 		if (EnergyWaveCooldown >= 0.0f && GetComponent<PlayerSetup>().player2)
 		{
 			EnergyWaveCooldown -= Time.deltaTime;
-			p2a2CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(0, 70, EnergyWaveCooldown));
+			p2a2CD.GetComponent<Image>().rectTransform.sizeDelta = new Vector2(70, Mathf.Lerp(70, 0, EnergyWaveCooldown));
 		}
 
 		// ReEnable all buttons after cooldown
